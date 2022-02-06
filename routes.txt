@@ -1,0 +1,61 @@
++--------+----------+--------------------------+---------------------+------------------------------------------------------------------------+------------+
+| Domain | Method   | URI                      | Name                | Action                                                                 | Middleware |
++--------+----------+--------------------------+---------------------+------------------------------------------------------------------------+------------+
+|        | GET|HEAD | /                        | home                | Closure                                                                | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | api/user                 |                     | Closure                                                                | api        |
+|        |          |                          |                     |                                                                        | auth:api   |
+|        | GET|HEAD | branches                 | branches.all        | App\Http\Controllers\Dash\BranchController@getAll                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | branches/add             | branches.add        | App\Http\Controllers\Dash\BranchController@add                         | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | branches/create          | branches.create     | App\Http\Controllers\Dash\BranchController@create                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | branches/delete/{id}     | branches.delete     | App\Http\Controllers\Dash\BranchController@delete                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | branches/edit/{id}       | branches.edit       | App\Http\Controllers\Dash\BranchController@edit                        | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | branches/update/{id}     | branches.update     | App\Http\Controllers\Dash\BranchController@update                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | doctor/login             | doctor.login        | App\Http\Controllers\Doctor\Auth\LoginController@showLoginForm         | web        |
+|        |          |                          |                     |                                                                        | guest      |
+|        | POST     | doctor/login             | doctor.login        | App\Http\Controllers\Doctor\Auth\LoginController@login                 | web        |
+|        |          |                          |                     |                                                                        | guest      |
+|        | GET|HEAD | doctors                  | doctors.all         | App\Http\Controllers\Dash\DoctorController@index                       | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | doctors/add              | doctors.add         | App\Http\Controllers\Dash\DoctorController@add                         | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | doctors/create           | doctors.create      | App\Http\Controllers\Dash\DoctorController@create                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | doctors/delete/{id}      | doctors.delete      | App\Http\Controllers\Dash\DoctorController@delete                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | doctors/edit/{id}        | doctors.edit        | App\Http\Controllers\Dash\DoctorController@edit                        | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | doctors/update/{id}      | doctors.update      | App\Http\Controllers\Dash\DoctorController@update                      | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | login                    | login               | App\Http\Controllers\Auth\LoginController@showLoginForm                | web        |
+|        |          |                          |                     |                                                                        | guest      |
+|        | POST     | login                    |                     | App\Http\Controllers\Auth\LoginController@login                        | web        |
+|        |          |                          |                     |                                                                        | guest      |
+|        | POST     | logout                   | logout              | App\Http\Controllers\Auth\LoginController@logout                       | web        |
+|        | GET|HEAD | password/confirm         | password.confirm    | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | password/confirm         |                     | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | password/email           | password.email      | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web        |
+|        | GET|HEAD | password/reset           | password.request    | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web        |
+|        | POST     | password/reset           | password.update     | App\Http\Controllers\Auth\ResetPasswordController@reset                | web        |
+|        | GET|HEAD | password/reset/{token}   | password.reset      | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web        |
+|        | GET|HEAD | specialities             | specialities.all    | App\Http\Controllers\Dash\SpecialityController@getAll                  | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | specialities/add         | specialities.add    | App\Http\Controllers\Dash\SpecialityController@add                     | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | specialities/create      | specialities.create | App\Http\Controllers\Dash\SpecialityController@create                  | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | specialities/delete/{id} | specialities.delete | App\Http\Controllers\Dash\SpecialityController@delete                  | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | GET|HEAD | specialities/edit/{id}   | specialities.edit   | App\Http\Controllers\Dash\SpecialityController@edit                    | web        |
+|        |          |                          |                     |                                                                        | auth       |
+|        | POST     | specialities/update/{id} | specialities.update | App\Http\Controllers\Dash\SpecialityController@update                  | web        |
+|        |          |                          |                     |                                                                        | auth       |
++--------+----------+--------------------------+---------------------+------------------------------------------------------------------------+------------+
